@@ -35,7 +35,7 @@ public class TarefaService {
 
     /**
      * metodo de listar
-     * @return todos {@link TarefaResponseDTO }
+     * @return {@link List<TarefaResponseDTO> }
      */
     public List<TarefaResponseDTO> listar(){
         return tarefaRepository.listar();
@@ -43,7 +43,7 @@ public class TarefaService {
 
     /**
      * metodo de listar Pendentes
-     * @return {@link TarefaResponseDTO } listarPendentes
+     * @return {@link  List<TarefaResponseDTO> } pendentes
      */
 
     public List<TarefaResponseDTO> listarPendentes() {
@@ -52,7 +52,7 @@ public class TarefaService {
 
     /**
      * metodo de Listar Concluidas
-     * @return {@link TarefaResponseDTO } Concluidas
+     * @return {@link  List<TarefaResponseDTO>} Concluidas
      */
 
     public List<TarefaResponseDTO> listarConcluidas() {
@@ -73,7 +73,7 @@ public class TarefaService {
      * metodo de atualizar
      * @param tarefaRequestDTO
      * @param id
-     * @return {@link TarefaResponseDTO } na tarefa de atualizar
+     * @return {@link TarefaResponseDTO } ja atualizada
      */
 
     public TarefaResponseDTO atualizar(TarefaRequestDTO tarefaRequestDTO, Long id){
@@ -84,7 +84,7 @@ public class TarefaService {
      * metodo de atualizar parcial
      * @param tarefaRequestDTO
      * @param id
-     * @return {@link TarefaResponseDTO } na tarefa de atualizar parcial
+     * @return {@link TarefaResponseDTO } ja atualizada
      */
 
     public TarefaResponseDTO atualizarParcial(TarefaRequestDTO tarefaRequestDTO, Long id){
@@ -94,7 +94,7 @@ public class TarefaService {
     /**
      * metode de atualizar status concluido
      * @param id
-     * @return {@link TarefaResponseDTO } na tarefa de atualizar status concluido
+     * @return {@link TarefaResponseDTO } ja atualizada
      */
 
     public TarefaResponseDTO atualizarStatusConcluido(Long id) {

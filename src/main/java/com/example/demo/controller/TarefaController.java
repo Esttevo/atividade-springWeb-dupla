@@ -19,7 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@RequestMapping("/api/tarefas")
+@RequestMapping("/api/v1/tarefas")
 @RestController
 
 /**
@@ -43,8 +43,8 @@ public class TarefaController {
 
     /**
      * Metodo de Criar
-     * @param {@link TarefaRequestDTO}
-     * @return Criar Tarefa
+     * @param tarefaRequestDTO
+     * @return {@link ResponseEntity<TarefaResponseDTO>} com tarefa criada
      */
 
 
@@ -83,7 +83,7 @@ public class TarefaController {
 
     /**
      * Metodo de listar
-     * @return lista de {@link TarefaResponseDTO}
+     * @return {@link ResponseEntity<List<TarefaResponseDTO>>}
      */
 
     @Operation(
@@ -110,7 +110,7 @@ public class TarefaController {
 
     /**
      * Metodo de listar tarefas pendentes
-     * @return lista de {@link TarefaResponseDTO}
+     * @return {@link ResponseEntity<List<TarefaResponseDTO>>}
      */
 
     @Operation(
@@ -136,7 +136,7 @@ public class TarefaController {
 
     /**
      * Metodo de listar tarefas concluidas
-     * @return lista de {@link TarefaResponseDTO}
+     * @return {@link ResponseEntity<List<TarefaResponseDTO>>}
      */
 
     @Operation(
@@ -163,7 +163,7 @@ public class TarefaController {
     /**
      * Metodo BuscarPorId
      * @param id
-     * @return {@link TarefaResponseDTO}
+     * @return {@link ResponseEntity<TarefaResponseDTO>}
      */
 
 
@@ -196,7 +196,7 @@ public class TarefaController {
      * Metodo de atualizar
      * @param tarefaRequestDTO
      * @param id
-     * @return {@link TarefaResponseDTO} atualizada
+     * @return {@link ResponseEntity<TarefaResponseDTO>} atualizada
      */
 
     @Operation(
@@ -226,7 +226,7 @@ public class TarefaController {
      * Atualizar tarefa parcialmente
      * @param tarefaRequestDTO
      * @param id
-     * @return {@link TarefaResponseDTO} atualizada
+     * @return {@link ResponseEntity<TarefaResponseDTO>} atualizada
      */
     @PatchMapping("/{id}")
     public ResponseEntity<TarefaResponseDTO> atualizarParcial(@RequestBody TarefaRequestDTO tarefaRequestDTO,
@@ -239,7 +239,7 @@ public class TarefaController {
     /**
      * Atualizar tarefa parcialmente, somente status para concluido
      * @param id
-     * @return {@link TarefaResponseDTO} atualizada
+     * @return {@link ResponseEntity<TarefaResponseDTO>} atualizada
      */
 
     @Operation(
@@ -269,7 +269,7 @@ public class TarefaController {
     /**
      * Metodo de deletar
      * @param id
-     * @return {@link TarefaResponseDTO}
+     * @return {@link ResponseEntity<Void>}
      */
 
     @Operation(

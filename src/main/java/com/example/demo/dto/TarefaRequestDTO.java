@@ -13,15 +13,13 @@ import jakarta.validation.constraints.Size;
 
 @Schema (description = "Dados utilizados para criar tarefas")
 
-
-
 public record TarefaRequestDTO(
 
         @Schema(
                 description = "Nome da tarefa",
                 example = "Matematica"
         )
-        @NotBlank(message = "não pode estar em branco")
+        @NotBlank(message = "nao pode estar em branco")
         @Size (min = 3 , max = 100, message = "O nome deve possuir entre 3 e 100 caracteres")
         String nome,
 
@@ -29,13 +27,14 @@ public record TarefaRequestDTO(
                 description = "Prioridade da tarefa",
                 example = "muito"
         )
-        @NotBlank(message = "não pode estar em branco")
+        @NotBlank(message = "nao pode estar em branco")
         @Size (min = 3 , max = 100, message = "O nome deve possuir entre 3 e 100 caracteres")
         String prioridade,
 
+        @Schema (
+                description = "Descricao da tarega",
+                example = "pegar chave x para fazer y por cause de"
+        )
         String descricao
-
-
-
 ) {
 }

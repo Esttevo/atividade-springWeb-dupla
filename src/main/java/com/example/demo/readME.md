@@ -1,9 +1,9 @@
 # Sistema API REST de controle do CRUD de Tarefas
-Desenvolvido por Mateus e Christian no dia 17/09/2026
+Desenvolvido por Mateus e Christian nos dias 17/09/2026 e 18/09/2026. 
 
 ## Como utilizar
 Baixe as dependecias que estão no pom.xml, e para acessar os endpoits
-utilize o postman
+utilize o postman.
 
 ## Justificativas
 Para guardar as tarefas como se fosse um banco, utilizamos uma lista static 
