@@ -104,7 +104,6 @@ public class TarefaRepository {
         tarefa.setDescricao(tarefaRequestDTO.descricao());
         tarefa.setPrioridade(tarefaRequestDTO.prioridade());
 
-        tarefas.add(tarefa);
         return toDTO(tarefa);
     }
 
@@ -119,10 +118,8 @@ public class TarefaRepository {
     public TarefaResponseDTO atualizarParcial(TarefaRequestDTO tarefaRequestDTO, Long id){
         Tarefa tarefa = tarefas.stream().filter(tarefa1 -> tarefa1.getId().equals(id)).findAny().orElseThrow(() -> new TarefaNaoEncontradaException("tarefa nao encontrada"));
 
+        //falta logica aqui
 
-
-
-        tarefas.add(tarefa);
         return toDTO(tarefa);
     }
 
@@ -144,7 +141,6 @@ public class TarefaRepository {
         tarefa.setStatusTarefa(StatusTarefa.CONCLUIDO);
 
 
-        tarefas.add(tarefa);
 
         return toDTO(tarefa);
 
